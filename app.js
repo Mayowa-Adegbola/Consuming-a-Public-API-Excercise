@@ -10,7 +10,7 @@ $(function(){
 	});
 
 	var api_key = "a12e84be9ffed661d18b00b87ceffd35";
-	var baseimg = "http://d3gtl9l2a4fn1j.cloudfront.net/t/p/w342";
+	var baseimg = "http://image.tmdb.org/t/p/w500";
 
 	//function definition 
 	var getPoster = function(){
@@ -43,7 +43,7 @@ $(function(){
 
 						//Display the poster and a message announcing the result
 
-						$('#poster').html('<h2 class="loading">Well, We found you a poster</h2><img id="thePoster" src=' + baseimg + json.results[0].poster_path + ' />');
+						$('#poster').html('<p class="loading">Well, We found you a poster</p><img id="thePoster" src=' + baseimg + json.results[0].poster_path + ' />');
 					} else {
 						$.getJSON("http://api.themoviedb.org/3/search/movie?query=goonies&api_key=" + api_key, 
 							function(json){
